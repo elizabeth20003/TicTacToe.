@@ -1,12 +1,11 @@
 package game;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
 public class GameBean {
-    private static final int GRID_SIZE = 3;
+    private static final int GRID_SIZE = 4;
     
     public enum GameState{
         NULL, O, X;
@@ -143,7 +142,7 @@ public class GameBean {
         if(!this.hasEmptyCell()){
             return -1;
         }
-        List<Integer> indexes = new ArrayList();
+        List<Integer> indexes = new ArrayList<Integer>();
         int index = 0;
         for(GameState[] line : this.gameStatus){
             boolean hasEmpty = false;
@@ -164,7 +163,7 @@ public class GameBean {
         if(!this.hasEmptyCell()){
             return -1;
         }
-        List<Integer> indexes = new ArrayList();
+        List<Integer> indexes = new ArrayList<Integer>();
         int index = 0;
         for(GameState cell : this.gameStatus[line]){
             if(cell == GameState.NULL){
